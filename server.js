@@ -10,6 +10,9 @@ mongoose.connect(process.env.MONGO_URL, () => {
 
 app.use(express.json());
 
+app.use('/user', require('./routes/userRoute'))
+app.use('/product', require('./routes/productRoute'))
+
 
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`)
