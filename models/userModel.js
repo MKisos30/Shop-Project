@@ -17,7 +17,22 @@ const UserSchema = new Schema({
         type: String,
         required: [true, 'User must have role']
     },
-    // cart
+    cart: {
+        items: [
+            {
+                count: {
+                    type: Number,
+                    require: true,
+                    default: 1
+                },
+                itemId: {
+                    type: Schema.Types.ObjectId,
+                    ref: "Products",
+                    require: true
+                }
+            }
+        ]
+    }
 })
 
 module.exports = model('User', UserSchema)
