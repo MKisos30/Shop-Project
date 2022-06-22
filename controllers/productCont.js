@@ -43,3 +43,7 @@ exports.removeProduct = async (req, res) => {
 //         res.send({ok:false, massage: error})
 //     }
 // }
+
+exports.deleteProduct = async (req, res) => {
+    
+}
