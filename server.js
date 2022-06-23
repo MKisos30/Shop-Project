@@ -8,6 +8,7 @@ mongoose.connect(process.env.MONGO_URL, () => {
     console.log('DB connected');
 });
 
+app.use(express.static("client/build"));
 app.use(express.json());
 
 app.use('/user', require('./routes/userRoute'))

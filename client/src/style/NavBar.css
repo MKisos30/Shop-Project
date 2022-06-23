@@ -1,0 +1,15 @@
+.nav {
+    background-color: lightgreen;
+    width: 100%;
+    padding: 1%;
+}
+
+.nav a {
+    font-size: 1.2rem;
+    margin: 0% 1%;
+}
+
+.nav__homeLink {
+    color: black;
+
+}

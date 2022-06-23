@@ -22,6 +22,7 @@ exports.userLogIn = async (req, res) => {
 exports.userRegister = async (req, res) => {
     try {
         const { name, email, password, confirmPassword } = req.body;
+        console.log(name, email, password, confirmPassword)
         const userExist = await User.findOne({ email })
         if (!userExist) {
             if (password == confirmPassword) {
